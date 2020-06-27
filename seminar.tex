@@ -36,7 +36,7 @@
 \title[Isospectralization]{Isospectralization, or how to hear shape, style, and correspondence}
 \author{Sricharan Chiruvolu}
 
-\institute{Advisor: Zorah Lähner}
+\institute{Zorah Lähner}
 \date{\today}
 
 
@@ -110,7 +110,7 @@
 
 \begin{frame}{Manifolds}
 
-(As discussed in previous talks) In computer vision, the notion a manifold is used quite frequently.
+(As discussed in previous talks) In computer vision, the notion of a manifold is used quite frequently.
 
 \begin{itemize}
   \item in rotation averaging (SO3),
@@ -140,7 +140,7 @@
 
 \begin{figure}
  \includegraphics[height=0.3\textwidth]{Geodesics2.png}
- \caption{\label{fig:Geodesics}Geodesic and tangent space in a Riemannian manifold. The geodesic joining x and y is a straight.}
+ \caption{\label{fig:Geodesics}Geodesic and tangent space in a Riemannian manifold. \footnote{Medinria: DT-MRI processing and visualization software; Xavier Pennec.}}
 \end{figure}
 
 \end{frame}
@@ -190,7 +190,7 @@
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{laplacian.png}
-    \caption{Laplace-Beltrami operator}
+    \caption{Laplace-Beltrami operator \footnote{Khan Academy; Grant Sanderson.}}
     \label{fig:laplacian}
 \end{figure}
 
@@ -252,7 +252,7 @@
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textwidth]{Indenticalshapes.png}
-    \caption{Ideal drums with membranes of these two different shapes (but otherwise identical) would sound the same.}
+    \caption{Membranes of these two different shapes (but otherwise identical) would "sound" the same.}
     \label{fig:Identicalshapes}
 \end{figure}
 
@@ -267,23 +267,23 @@
 
 \begin{itemize}
 % TODO: one slide per idea.
-    \item Theoretically Negative. \texttt{Why?}
+    \item Theoretically Negative. \texttt{Why?} - There exists isospectral manifolds that are nonisometric.
     \item With additional priors, practically feasible. We can recover the structure of an object from its spectrum.
     
 \end{itemize}
     
 \end{frame}
 
-\begin{frame}{Applications}
+% \begin{frame}{Applications}
 
-\begin{itemize}
-    \item \texttt{Finding Intrinsic Coordinates} - Can be used as a universal pre-processing technique for general correspondence matching problems.
-    \item  \texttt{Non-isometric Shape Matching} - Can be used to find correspondences between non-rigid shapes (intrinsic isometrics).
-    \item  \texttt{Style/ Pose Transfer}.
+% \begin{itemize}
+%     \item \texttt{Finding Intrinsic Coordinates} - Can be used as a universal pre-processing technique for general correspondence matching problems.
+%     \item  \texttt{Non-isometric Shape Matching} - Can be used to find correspondences between non-rigid shapes (intrinsic isometrics).
+%     \item  \texttt{Style/ Pose Transfer}.
     
-\end{itemize}
+% \end{itemize}
     
-\end{frame}
+% \end{frame}
 
 
 \subsection{Isospectralization}
@@ -369,12 +369,9 @@
     
     $$ \rho_{X}(\mathbf{V}) = \left\| \mathbf{L}_0^g \mathbf{V}  \right\|_{2}^{2} $$
     
-    \item Encourage volume to grow/shrink to disambiguate isometric shapes
+    \item Encourage small total displacement from initial embedding - volume to grow/shrink to disambiguate isometric shapes.
     
-    $$\rho_{X}(V) = $$
-    
-    $$ -\left(\begin{array}{l}1 \\ 1 \\ 1\end{array}\right)^{T} \sum_{i j k \in F}\left(\left(\mathbf{v}^{j}-\mathbf{v}^{i}\right) \times\left(\mathbf{v}^{k}-\mathbf{v}^{j}\right)\right)\left(\mathbf{v}^{i}+\mathbf{v}^{j}+\mathbf{v}^{k}\right)$$
-
+    $$ \rho_{X}(\mathbf{V})=\sum_{i=1}^{n}\left(a_{i}\left(\mathbf{v}^{i}-\mathbf{v}_{0}^{i}\right)\right)^{2} $$
     
 \end{itemize}
     
@@ -389,16 +386,16 @@
     
 \end{frame}
 
-\begin{frame}{Shape reconstruction on Surfaces}
+% \begin{frame}{Shape reconstruction on Surfaces}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{Surfaces2.png}
-    \caption{Shape reconstruction on Surfaces}
-    \label{fig:my_label}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\textwidth]{Surfaces2.png}
+%     \caption{Shape reconstruction on Surfaces}
+%     \label{fig:abel}
+% \end{figure}
     
-\end{frame}
+% \end{frame}
 
 \section{Applications/Results}
 
@@ -416,15 +413,15 @@
 \end{frame}
 
 
-\begin{frame}{Non-isometric shape matching}
+% \begin{frame}{Non-isometric shape matching}
     
-\begin{figure}
- \includegraphics[width=\textwidth]{FAUST.png}
- \caption{\label{fig:FAUST} Non-isometric shape matching on FAUST dataset. Texture maps to Correspondences.}
-\end{figure}
+% \begin{figure}
+%  \includegraphics[width=\textwidth]{FAUST.png}
+%  \caption{\label{fig:FAUST} Non-isometric shape matching on FAUST dataset. Texture maps to Correspondences.}
+% \end{figure}
     
     
-\end{frame}
+% \end{frame}
 
 
 
@@ -455,6 +452,13 @@
 \end{frame}
 
 
+\begin{frame}{End}
+    \begin{itemize}
+        \item Quick Demo.
+        \item Questions.
+        \item Thanks for listening!
+    \end{itemize}
+\end{frame}
 
 
 
